@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Mother's Day!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff8e1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 2em;
+      margin: 10px 0;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.2em;
+    }
+
+    .heart {
+      font-size: 2rem;
+      color: red;
+      margin-top: 20px;
+      animation: beat 1s infinite alternate;
+    }
+
+    @keyframes beat {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <audio id="bgMusic" autoplay loop muted>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+    window.addEventListener('load', function () {
+      const audio = document.getElementById('bgMusic');
+      audio.muted = false;
+      audio.play().catch(function (error) {
+        console.log('Autoplay prevented. User interaction needed.');
+      });
+    });
+  </script>
+  <div class="card">
+    <img src="mummy.png" alt="Mom's Photo">
+    <h1>Happy Mother's Day, Aai! 💐</h1>
+    <p>Aaj Mother's Day aahe… aani aaj  sarvataadhi tula ek gosht manapasun sangaychi aahe.</p>
+    <p>"Sorry"</p>
+    <p>I just want to say I'm really sorry for the way I behaved earlier. I know I was rude and totally out of line, and I regret it so much.
+
+      आई, तू माझं सगळं आहेस. तुझ्या शिवाय जीवन कल्पनाही करता येत नाही. तू आईच नाही, माझी खरी मैत्रीण, मार्गदर्शक आणि प्रत्येक अडचणीतला आधार आहेस. तुझं प्रेम, तुझी काळजी, तुझं सतत माझ्या पाठीशी उभं राहणं — हे सगळं खूप अनमोल आहे.</p>
+    <p>Today is Mother’s Day, and I just want you to know how much I love you and how lucky I am to have you. </p>
+    <p>Please don’t stay mad at me.💖</p>
+    <div class="heart">❤️</div>
+  </div>
+
+</body>
+</html>
